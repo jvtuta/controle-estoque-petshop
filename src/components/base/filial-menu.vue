@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-item1 w-5">
+  <div class="flex-item1">
     <h3>Filiais</h3>
     <hr />
     <ul class="list bg-dark">
