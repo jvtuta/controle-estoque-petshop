@@ -1,15 +1,15 @@
 <template>
   <div>
-    <filiais />
+    estoque da filial
   </div>
   
 </template>
 
 <script>
-import filiais from '@/components/filiais.vue'
+
 export default {
   components: {
-    filiais
+    
   }
 }
 </script>

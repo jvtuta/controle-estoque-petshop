@@ -28,6 +28,7 @@ export default {
 div.actions {
     align-self: center;
     margin-left: auto !important;
+    margin-right: 360px !important;
 }
 
 .navcontainer {
@@ -64,6 +65,7 @@ div.actions {
 .icon {
     align-self: center;
     font-size: 26px;
+    margin-left: 330px !important;
 }
 
 </style>

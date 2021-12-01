@@ -1,6 +1,6 @@
 <template>
   <div class="container w-80">
-    <div class="flex-item1 w-20">
+    <div class="flex-item1 w-5">
       <h3>Filiais</h3>
       <hr />
       <ul class="list bg-dark">
@@ -8,7 +8,7 @@
           tag="li"
           v-for="filial in filiais"
           :key="filial.id"
-          :to="'filial/' + filial.id"
+          :to="'estoque/' + filial.id"
           class="list-item"
         >
           <a>Filial id:{{ filial.id }} | {{ filial.nome }}</a>
@@ -104,28 +104,7 @@ export default {
   padding: 10px 5px;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
 
-table tr td,
-th {
-  border: 1px solid #ddd;
-  text-align: center;
-}
-table tr td {
-    padding: 8px;
-}
-
-table th {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-table tbody tr:hover {
-  background-color: #ddd;
-}
 
 .filiais {
     margin-top: 25px;

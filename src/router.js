@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Login from '@/views/Login.vue'
 import Home from '@/views/Home.vue'
 import Estoque from "@/views/Estoque.vue"
-import EstoqueLista from "@/components/estoque-lista.vue"
 import store from '@/store/store'
 
 Vue.use(Router)
@@ -24,15 +23,9 @@ const router = new Router({
         },
         {
             name: 'estoque',
-            path: '/estoque',
+            path: '/estoque/:id',
             component: Estoque,
-            children: [
-                {   
-                    path: 'filial/:id',
-                    component: EstoqueLista,
-                    props: true
-                },
-            ]
+            props: true
         }
 
     ]
