@@ -1,22 +1,28 @@
 <template>
-    <Section-component>
-      <template>
+    <div>
         <div class="home">
           <h2>Home</h2>
         </div>
         
-        <filiais />
-      </template>
-    </Section-component>
+        <filiais >
+          <menu-filial :filiais="filiais"> </menu-filial>
+        </filiais>
+  </div>
 </template>
 
 <script>
-import SectionComponent from '@/components/base/section.vue'
+
 import filiais from '@/components/filiais.vue'
+import menuFilial from '@/components/base/filial-menu.vue'
+import { mapGetters } from "vuex"
 export default {
-  components: {
-    SectionComponent,
-    filiais
+  components: {    
+    filiais,
+    menuFilial
+  },
+  computed: {
+        ...mapGetters('estoque', ['filiais'])
+
   }
 }
 </script>

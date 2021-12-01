@@ -4,6 +4,8 @@ import Login from '@/views/Login.vue'
 import Home from '@/views/Home.vue'
 import Estoque from "@/views/Estoque.vue"
 import store from '@/store/store'
+import Movimentacoes from '@/views/Movimentacoes.vue'
+import Controle from '@/views/Controle.vue'
 
 Vue.use(Router)
 
@@ -26,6 +28,16 @@ const router = new Router({
             path: '/estoque/:id',
             component: Estoque,
             props: true
+        },
+        {
+            name: 'movimentacoes',
+            path: '/movimentacoes',
+            component: Movimentacoes
+        },
+        {
+            name: 'controle',
+            path: '/controle',
+            component: Controle
         }
 
     ]

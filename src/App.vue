@@ -9,7 +9,10 @@
         <button @click="handleBlogout">Sair</button>
       </template>
     </navbar>
-    <router-view></router-view>
+    <SectionComponent> 
+      <router-view></router-view>
+    </SectionComponent>
+    
   </div>
 </template>
 
@@ -17,10 +20,12 @@
 import { mapGetters, mapActions } from "vuex";
 import navbar from "@/components/base/navbar.vue";
 import menuNav from "@/components/base/menu-nav.vue";
+import SectionComponent from "@/components/base/section.vue"
 export default {
   components: {
     navbar,
     menuNav,
+    SectionComponent
   },
   computed: {
     ...mapGetters("login", ["isAuthenticated"]),

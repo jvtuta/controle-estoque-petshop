@@ -1,20 +1,6 @@
 <template>
   <div class="container w-80">
-    <div class="flex-item1 w-5">
-      <h3>Filiais</h3>
-      <hr />
-      <ul class="list bg-dark">
-        <router-link
-          tag="li"
-          v-for="filial in filiais"
-          :key="filial.id"
-          :to="'estoque/' + filial.id"
-          class="list-item"
-        >
-          <a>Filial id:{{ filial.id }} | {{ filial.nome }}</a>
-        </router-link>
-      </ul>
-    </div>
+    <slot> </slot>
     <div class="filiais flex-item2">
       <div>
         <!-- Filial padrão -->
@@ -46,56 +32,18 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex"
+
 export default {
+  components: {
+    
+  },
   data: () => ({
-    filiais: [
-      {
-        id: 1,
-        nome: "Matriz",
-        total_p_estoque: 12,
-        movimentacoes: 245,
-        saidas: 100,
-        entradas: 145,
-        endereco: "Df Brasilia ... lt 04",
-      },
-      {
-        id: 2,
-        nome: "Filial 1",
-        total_p_estoque: 12,
-        movimentacoes: 140,
-        saidas: 70,
-        entradas: 70,
-        endereco: "Df Brasilia ... lt 05"
-      },
-      {
-        id: 3,
-        nome: "Filial 2",
-        total_p_estoque: 12,
-        movimentacoes: 140,
-        saidas: 70,
-        entradas: 70,
-        endereco: "Df Brasilia ... lt 05"
-      },
-      {
-        id: 4,
-        nome: "Filial 3",
-        total_p_estoque: 12,
-        movimentacoes: 140,
-        saidas: 70,
-        entradas: 70,
-        endereco: "Df Brasilia ... lt 05"
-      },
-      {
-        id: 5,
-        nome: "Filial 4",
-        total_p_estoque: 12,
-        movimentacoes: 140,
-        saidas: 70,
-        entradas: 70,
-        endereco: "Df Brasilia ... lt 05"
-      },
-    ],
+    
   }),
+  computed: {
+    ...mapGetters('estoque', ['filiais'])
+  }
 };
 </script>
 
