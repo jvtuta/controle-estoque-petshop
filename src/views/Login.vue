@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-      <Card text-header="Login" >
+      <Card text-header="Login" class="p-1">
         <template v-slot:body>
           <div>
             <input type="text" v-model="login" placeholder="Login">  
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import card from "@/components/cards/card.vue"
+import card from "@/components/base/card/card.vue"
 import { mapActions, mapGetters } from 'vuex'
 export default {
   components: {
@@ -49,7 +49,9 @@ export default {
 <style scoped>
   .login-container {
     margin: 5px auto;
-    max-width: 400px;
+    max-width: 500px;
     min-width: 300px;
   }
+
+
 </style>

@@ -25,7 +25,7 @@ export default {
     .card {
         display: flex;
         flex-direction: column;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.404);
         
     }
     .rounded {
